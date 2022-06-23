@@ -6,6 +6,8 @@ import { useEffect, useReducer } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import logger from 'use-reducer-logger';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox'
 import Product from '../components/Product';
 
 const reducer = (state, action) => {
@@ -50,9 +52,9 @@ function HomeScreen() {
       <h1>Feature Products</h1>
       <div className="products">
         {loading ? (
-          <div>Loading</div>
+          <LoadingBox />
         ) : error ? (
-          <div>{error}</div>
+          <MessageBox variant="danger">{error}</MessageBox>
         ) : (
           <Row>
             {products.map((product) => (

@@ -1,5 +1,6 @@
 import Containter from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import { Helmet } from 'react-helmet-async';
 import { LinkContainer } from 'react-router-bootstrap';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
@@ -9,6 +10,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className='d-flex flex-column site-container'>
+        <Helmet>
+          <title>Amazona</title>
+        </Helmet>
         <header>
           <Navbar bg="dark" variant="dark">
             <Containter>
