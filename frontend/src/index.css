@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 .site-container {
   min-height: 100vh;
 }
@@ -26,7 +25,6 @@ main {
   justify-content: center;
 }
 
-
 .product {
   border: 1px #404040 solid;
   margin: 1rem;
@@ -34,7 +32,6 @@ main {
 .rating span {
   color: #ffc000;
 }
-
 
 .product img {
   width: 100%;
@@ -47,4 +44,8 @@ main {
 
 .img-large {
   max-width: 100%;
+}
+
+.img-thumbnail {
+  height: 80px;
 }
