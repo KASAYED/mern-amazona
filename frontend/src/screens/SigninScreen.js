@@ -10,8 +10,8 @@ import { Store } from '../Store';
 import { getError } from '../utils';
 
 export default function SigninScreen() {
-  const [email, setEmail] = useState()
-  const [password, setPassword]= useState()
+  const [email, setEmail] = useState('')
+  const [password, setPassword]= useState('')
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get('redirect');
   const redirect = redirectInUrl ? redirectInUrl : '/';
