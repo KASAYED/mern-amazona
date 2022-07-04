@@ -13,7 +13,7 @@ const dotenv = require('dotenv');
 const seedRouter = require('./routes/seedRoute');
 const productRouter = require('./routes/productRoutes');
 const userRouter = require('./routes/userRoutes');
-
+const orderRouter = require('./routes/orderRoutes');
 dotenv.config();
 
 mongoose
@@ -33,6 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/seed', seedRouter);
 app.use('/api/products', productRouter);
 app.use('/api/users', userRouter);
+app.use('/api/orders', orderRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
